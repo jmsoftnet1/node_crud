@@ -15,7 +15,7 @@ router.post('/cliente/operar', (req, res, next) => {
     });
     per.save();
   } else {    
-    console.log(req.body._id);
+    console.log(req.body._id+"id_final");
     Cliente.findByIdAndUpdate(req.body._id, { $set: req.body }, { new: true }, (err, model) => {
       if (err) throw err;
     });
